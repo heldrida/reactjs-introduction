@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Hello React</title>
+    <script src="http://fb.me/react-0.12.1.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <!-- start: JSX syntax -->
+    <script type="text/jsx">
+	    /** @jsx React.DOM */
+	    var MyComponent = React.createClass({
+	    	render: function () {
+			return (
+			<h1>The name is { this.props.name }!</h1>
+			);
+		}
+	    });
+
+	    React.renderComponent(
+	    	<MyComponent name="Will Smith" />,
+		document.getElementById('content')
+	    );
+
+    </script>
+    <!-- end: JSX syntax -->
+  </body>
+</html>
